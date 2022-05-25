@@ -7,6 +7,8 @@ package w32.sqlite;
 // Totéž proveďte pro soubor X:\stemberk\verejne_zaci\staty.csv a zobrazte
 // v TableView, případně v nějakém grafu JavaFX.
 
+// Vytvořte další TableView, které bude ze stejných dat zobrazovat následující souhrn
+// po dnech: datum, průměrný věk, počet mužů, počet žen, celkový počet
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -101,8 +103,8 @@ public class FUkol {
             if(hodnoty.length > 4 ) kraj = hodnoty[4];
             if(hodnoty.length > 5 ) okres = hodnoty[5];
             if(hodnoty.length > 6 ) vZahranici = Boolean.parseBoolean(hodnoty[6]);
-            if(hodnoty.length > 7 ) stat = hodnoty[5];
-            if(hodnoty.length > 8 ) reportovanoKhs = Boolean.parseBoolean(hodnoty[6]);
+            if(hodnoty.length > 7 ) stat = hodnoty[7];
+            if(hodnoty.length > 8 ) reportovanoKhs = Boolean.parseBoolean(hodnoty[8]);
             System.out.format("%s, %s, %d, %s, %s, %s, %b, %s, %b%n",
                     id, datum, vek, mf, kraj, okres, vZahranici, stat, reportovanoKhs);
             insert(id, datum, vek, mf, kraj, okres, vZahranici, stat, reportovanoKhs);
